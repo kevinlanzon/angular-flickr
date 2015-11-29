@@ -1,0 +1,36 @@
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+/*=================NAVBAR=================*/
+nav {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  .navbar-brand {
+    a {
+      color: #BD1E23;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+/*=================MAIN CONTENT=================*/
+body {
+  background: #E2DFDE;
+  padding-top: 100px;
+}
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  color: #959292;
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+}
