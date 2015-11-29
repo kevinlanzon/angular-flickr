@@ -1,14 +1,19 @@
-'use strict';
-
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('flickrApp.feed', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'partials/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/feed', {
+    templateUrl: 'partials/feed.html',
+    controller: 'FeedController'
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('FeedController', ['$scope', '$http', function($scope, $http) {
 
+  $http.jsonp('https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json')
+    .success(jsonFlickrFeed = function(data) {
+
+    $scope.data = data;
+    $scope.flickrFeed = data.items;
+
+  });
 }]);

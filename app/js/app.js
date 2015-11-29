@@ -1,9 +1,7 @@
-'use strict';
-
-angular.module('myApp', [
+angular.module('flickrApp', [
   'ngRoute',
-  'myApp.view1'
+  'flickrApp.feed'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/feed'});
 }]);
